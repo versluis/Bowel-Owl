@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Event.h"
 
 
-@interface Meal : NSManagedObject
+@interface Meal : Event
 
-@property (nonatomic, retain) NSDate * timeStamp;
-@property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSString * notes;
-@property (nonatomic, retain) NSString * diet;
 
 @end

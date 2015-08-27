@@ -11,9 +11,5 @@
 
 @implementation Meal
 
-@dynamic timeStamp;
-@dynamic title;
-@dynamic notes;
-@dynamic diet;
 
 @end

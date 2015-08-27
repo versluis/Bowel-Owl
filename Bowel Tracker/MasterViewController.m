@@ -113,7 +113,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     // Cell title
-    Meal *currentMeal = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Event *currentMeal = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = currentMeal.title;
     
     // build date formatter

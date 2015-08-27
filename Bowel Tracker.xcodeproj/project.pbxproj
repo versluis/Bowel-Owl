@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2D7EAD71B8FBBFF002E5005 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D7EAD61B8FBBFF002E5005 /* Event.m */; };
+		D2D7EADD1B8FBE63002E5005 /* BowelMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D7EADC1B8FBE63002E5005 /* BowelMovement.m */; };
+		D2D7EAE01B8FBE64002E5005 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D7EADF1B8FBE64002E5005 /* Meal.m */; };
 		D2F486DA1B8F5E0D00824A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F486D91B8F5E0D00824A0B /* main.m */; };
 		D2F486DD1B8F5E0D00824A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F486DC1B8F5E0D00824A0B /* AppDelegate.m */; };
 		D2F486E01B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2F486DE1B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld */; };
@@ -19,8 +22,6 @@
 		D2F487051B8F5F3000824A0B /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F487041B8F5F3000824A0B /* NewEventViewController.m */; };
 		D2F487081B8F5F3C00824A0B /* NewBowelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */; };
 		D2F4870B1B8F5F4500824A0B /* NewMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F4870A1B8F5F4500824A0B /* NewMealViewController.m */; };
-		D2F4870E1B8F605700824A0B /* BowelMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F4870D1B8F605700824A0B /* BowelMovement.m */; };
-		D2F487111B8F605800824A0B /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F487101B8F605800824A0B /* Meal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2D7EAD51B8FBBFF002E5005 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = "Bowel Tracker/Event.h"; sourceTree = "<group>"; };
+		D2D7EAD61B8FBBFF002E5005 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = "Bowel Tracker/Event.m"; sourceTree = "<group>"; };
+		D2D7EADB1B8FBE63002E5005 /* BowelMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BowelMovement.h; path = "Bowel Tracker/BowelMovement.h"; sourceTree = "<group>"; };
+		D2D7EADC1B8FBE63002E5005 /* BowelMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BowelMovement.m; path = "Bowel Tracker/BowelMovement.m"; sourceTree = "<group>"; };
+		D2D7EADE1B8FBE64002E5005 /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Meal.h; path = "Bowel Tracker/Meal.h"; sourceTree = "<group>"; };
+		D2D7EADF1B8FBE64002E5005 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Meal.m; path = "Bowel Tracker/Meal.m"; sourceTree = "<group>"; };
 		D2F486D41B8F5E0D00824A0B /* Bowel Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bowel Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F486D81B8F5E0D00824A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F486D91B8F5E0D00824A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,10 +63,6 @@
 		D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBowelViewController.m; sourceTree = "<group>"; };
 		D2F487091B8F5F4500824A0B /* NewMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMealViewController.h; sourceTree = "<group>"; };
 		D2F4870A1B8F5F4500824A0B /* NewMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMealViewController.m; sourceTree = "<group>"; };
-		D2F4870C1B8F605700824A0B /* BowelMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BowelMovement.h; sourceTree = "<group>"; };
-		D2F4870D1B8F605700824A0B /* BowelMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BowelMovement.m; sourceTree = "<group>"; };
-		D2F4870F1B8F605800824A0B /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
-		D2F487101B8F605800824A0B /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,12 @@
 		D2F486CB1B8F5E0D00824A0B = {
 			isa = PBXGroup;
 			children = (
+				D2D7EADE1B8FBE64002E5005 /* Meal.h */,
+				D2D7EADF1B8FBE64002E5005 /* Meal.m */,
+				D2D7EADB1B8FBE63002E5005 /* BowelMovement.h */,
+				D2D7EADC1B8FBE63002E5005 /* BowelMovement.m */,
+				D2D7EAD51B8FBBFF002E5005 /* Event.h */,
+				D2D7EAD61B8FBBFF002E5005 /* Event.m */,
 				D2F486D61B8F5E0D00824A0B /* Bowel Tracker */,
 				D2F486F61B8F5E0D00824A0B /* Bowel TrackerTests */,
 				D2F486D51B8F5E0D00824A0B /* Products */,
@@ -117,10 +126,6 @@
 				D2F486EA1B8F5E0D00824A0B /* Images.xcassets */,
 				D2F486EC1B8F5E0D00824A0B /* LaunchScreen.xib */,
 				D2F486DE1B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld */,
-				D2F4870F1B8F605800824A0B /* Meal.h */,
-				D2F487101B8F605800824A0B /* Meal.m */,
-				D2F4870C1B8F605700824A0B /* BowelMovement.h */,
-				D2F4870D1B8F605700824A0B /* BowelMovement.m */,
 				D2F486D71B8F5E0D00824A0B /* Supporting Files */,
 			);
 			path = "Bowel Tracker";
@@ -253,15 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F487111B8F605800824A0B /* Meal.m in Sources */,
+				D2D7EAD71B8FBBFF002E5005 /* Event.m in Sources */,
+				D2D7EAE01B8FBE64002E5005 /* Meal.m in Sources */,
 				D2F487051B8F5F3000824A0B /* NewEventViewController.m in Sources */,
 				D2F486E61B8F5E0D00824A0B /* DetailViewController.m in Sources */,
 				D2F4870B1B8F5F4500824A0B /* NewMealViewController.m in Sources */,
 				D2F487081B8F5F3C00824A0B /* NewBowelViewController.m in Sources */,
-				D2F4870E1B8F605700824A0B /* BowelMovement.m in Sources */,
 				D2F486E31B8F5E0D00824A0B /* MasterViewController.m in Sources */,
 				D2F486DD1B8F5E0D00824A0B /* AppDelegate.m in Sources */,
 				D2F486E01B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld in Sources */,
+				D2D7EADD1B8FBE63002E5005 /* BowelMovement.m in Sources */,
 				D2F486DA1B8F5E0D00824A0B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
