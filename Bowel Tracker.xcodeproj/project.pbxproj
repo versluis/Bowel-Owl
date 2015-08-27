@@ -16,6 +16,11 @@
 		D2F486EB1B8F5E0D00824A0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F486EA1B8F5E0D00824A0B /* Images.xcassets */; };
 		D2F486EE1B8F5E0D00824A0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2F486EC1B8F5E0D00824A0B /* LaunchScreen.xib */; };
 		D2F486FA1B8F5E0D00824A0B /* Bowel_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F486F91B8F5E0D00824A0B /* Bowel_TrackerTests.m */; };
+		D2F487051B8F5F3000824A0B /* NewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F487041B8F5F3000824A0B /* NewEventViewController.m */; };
+		D2F487081B8F5F3C00824A0B /* NewBowelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */; };
+		D2F4870B1B8F5F4500824A0B /* NewMealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F4870A1B8F5F4500824A0B /* NewMealViewController.m */; };
+		D2F4870E1B8F605700824A0B /* BowelMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F4870D1B8F605700824A0B /* BowelMovement.m */; };
+		D2F487111B8F605800824A0B /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F487101B8F605800824A0B /* Meal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,16 @@
 		D2F486F31B8F5E0D00824A0B /* Bowel TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bowel TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F486F81B8F5E0D00824A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F486F91B8F5E0D00824A0B /* Bowel_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bowel_TrackerTests.m; sourceTree = "<group>"; };
+		D2F487031B8F5F3000824A0B /* NewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventViewController.h; sourceTree = "<group>"; };
+		D2F487041B8F5F3000824A0B /* NewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventViewController.m; sourceTree = "<group>"; };
+		D2F487061B8F5F3C00824A0B /* NewBowelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBowelViewController.h; sourceTree = "<group>"; };
+		D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBowelViewController.m; sourceTree = "<group>"; };
+		D2F487091B8F5F4500824A0B /* NewMealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMealViewController.h; sourceTree = "<group>"; };
+		D2F4870A1B8F5F4500824A0B /* NewMealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMealViewController.m; sourceTree = "<group>"; };
+		D2F4870C1B8F605700824A0B /* BowelMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BowelMovement.h; sourceTree = "<group>"; };
+		D2F4870D1B8F605700824A0B /* BowelMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BowelMovement.m; sourceTree = "<group>"; };
+		D2F4870F1B8F605800824A0B /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		D2F487101B8F605800824A0B /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +107,20 @@
 				D2F486E21B8F5E0D00824A0B /* MasterViewController.m */,
 				D2F486E41B8F5E0D00824A0B /* DetailViewController.h */,
 				D2F486E51B8F5E0D00824A0B /* DetailViewController.m */,
+				D2F487031B8F5F3000824A0B /* NewEventViewController.h */,
+				D2F487041B8F5F3000824A0B /* NewEventViewController.m */,
+				D2F487061B8F5F3C00824A0B /* NewBowelViewController.h */,
+				D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */,
+				D2F487091B8F5F4500824A0B /* NewMealViewController.h */,
+				D2F4870A1B8F5F4500824A0B /* NewMealViewController.m */,
 				D2F486E71B8F5E0D00824A0B /* Main.storyboard */,
 				D2F486EA1B8F5E0D00824A0B /* Images.xcassets */,
 				D2F486EC1B8F5E0D00824A0B /* LaunchScreen.xib */,
 				D2F486DE1B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld */,
+				D2F4870F1B8F605800824A0B /* Meal.h */,
+				D2F487101B8F605800824A0B /* Meal.m */,
+				D2F4870C1B8F605700824A0B /* BowelMovement.h */,
+				D2F4870D1B8F605700824A0B /* BowelMovement.m */,
 				D2F486D71B8F5E0D00824A0B /* Supporting Files */,
 			);
 			path = "Bowel Tracker";
@@ -176,6 +201,7 @@
 				TargetAttributes = {
 					D2F486D31B8F5E0D00824A0B = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = F34HMY85N9;
 					};
 					D2F486F21B8F5E0D00824A0B = {
 						CreatedOnToolsVersion = 6.2;
@@ -227,7 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F487111B8F605800824A0B /* Meal.m in Sources */,
+				D2F487051B8F5F3000824A0B /* NewEventViewController.m in Sources */,
 				D2F486E61B8F5E0D00824A0B /* DetailViewController.m in Sources */,
+				D2F4870B1B8F5F4500824A0B /* NewMealViewController.m in Sources */,
+				D2F487081B8F5F3C00824A0B /* NewBowelViewController.m in Sources */,
+				D2F4870E1B8F605700824A0B /* BowelMovement.m in Sources */,
 				D2F486E31B8F5E0D00824A0B /* MasterViewController.m in Sources */,
 				D2F486DD1B8F5E0D00824A0B /* AppDelegate.m in Sources */,
 				D2F486E01B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld in Sources */,
@@ -355,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Bowel Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Bowel Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
