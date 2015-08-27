@@ -108,6 +108,12 @@
         // Replace this with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        
+        // if there's an issue with the store during development,
+        // let's just delete it via this handy method:
+        NSLog(@"Deleting store file - please launch again ;-)");
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        
         abort();
     }
     

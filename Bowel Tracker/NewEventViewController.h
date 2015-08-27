@@ -15,7 +15,12 @@
 #import <UIKit/UIKit.h>
 #import "NewBowelViewController.h"
 #import "NewMealViewController.h"
+#import "Meal.h"
+#import "BowelMovement.h"
+#import "AppDelegate.h"
 
-@interface NewEventViewController : UIViewController
+@interface NewEventViewController : UIViewController <BowelMovementDelegate, MealDelegate>
 
 @end
+
+

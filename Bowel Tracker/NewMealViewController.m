@@ -10,6 +10,11 @@
 
 @interface NewMealViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *mealTitle;
+@property (strong, nonatomic) IBOutlet UITextField *mealTextField;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+
+
 @end
 
 @implementation NewMealViewController
@@ -19,6 +24,10 @@
     
     // set our title
     self.navigationItem.title = self.displayTitle;
+    
+    // create a SAVE button on the right
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveMeal)];
+    self.navigationItem.rightBarButtonItem = saveButton;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,14 +35,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)saveMeal {
+    
+    // current date (replace with date picker later)
+    self.meal.timeStamp = [NSDate date];
+    
+    // transfer values from text fields to managed object
+    self.meal.title = self.mealTextField.text;
+    
+    // call delegate and save context
+    [self.delegate mealSave:self.meal];
 }
-*/
+
 
 @end

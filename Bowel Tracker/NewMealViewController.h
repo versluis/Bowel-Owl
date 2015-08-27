@@ -9,9 +9,22 @@
 // Called from the NewEventViewController to create a new Meal Event.
 
 #import <UIKit/UIKit.h>
+#import "Meal.h"
 
+@protocol MealDelegate;
 @interface NewMealViewController : UIViewController
 
 @property (nonatomic, strong) NSString *displayTitle;
+@property (nonatomic, strong) Meal *meal;
+@property (weak) id <MealDelegate> delegate;
+
+@end
+
+// Meal Protocol
+
+@protocol MealDelegate
+
+- (void)mealSave:(Meal *)meal;
+- (void)mealCancel:(Meal *)meal;
 
 @end

@@ -109,10 +109,10 @@
 				D2F486E51B8F5E0D00824A0B /* DetailViewController.m */,
 				D2F487031B8F5F3000824A0B /* NewEventViewController.h */,
 				D2F487041B8F5F3000824A0B /* NewEventViewController.m */,
-				D2F487061B8F5F3C00824A0B /* NewBowelViewController.h */,
-				D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */,
 				D2F487091B8F5F4500824A0B /* NewMealViewController.h */,
 				D2F4870A1B8F5F4500824A0B /* NewMealViewController.m */,
+				D2F487061B8F5F3C00824A0B /* NewBowelViewController.h */,
+				D2F487071B8F5F3C00824A0B /* NewBowelViewController.m */,
 				D2F486E71B8F5E0D00824A0B /* Main.storyboard */,
 				D2F486EA1B8F5E0D00824A0B /* Images.xcassets */,
 				D2F486EC1B8F5E0D00824A0B /* LaunchScreen.xib */,
@@ -457,6 +457,7 @@
 				D2F486FF1B8F5E0D00824A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2F487001B8F5E0D00824A0B /* Build configuration list for PBXNativeTarget "Bowel TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +466,7 @@
 				D2F487021B8F5E0D00824A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

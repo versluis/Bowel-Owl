@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Meal.h"
+#import "BowelMovement.h"
 
 @class DetailViewController;
 
