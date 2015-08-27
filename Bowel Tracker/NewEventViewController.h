@@ -13,6 +13,8 @@
 // and must save it to Core Data.
 
 #import <UIKit/UIKit.h>
+#import "NewBowelViewController.h"
+#import "NewMealViewController.h"
 
 @interface NewEventViewController : UIViewController
 

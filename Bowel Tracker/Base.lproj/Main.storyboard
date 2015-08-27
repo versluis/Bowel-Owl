@@ -131,21 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-VH-Dc4">
-                                <rect key="frame" x="230" y="225" width="140" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RhP-Ph-gFf"/>
-                                    <constraint firstAttribute="width" constant="140" id="d95-3j-zX3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Log Meal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="newMeal:" destination="OEe-cP-TgD" eventType="touchUpInside" id="LGj-As-M7N"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMJ-FW-cMd">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMJ-FW-cMd">
                                 <rect key="frame" x="150" y="311" width="300" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Log Bowel Movement">
@@ -155,15 +141,21 @@
                                     <action selector="newBowelMovement:" destination="OEe-cP-TgD" eventType="touchUpInside" id="3cL-va-M0O"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDq-VH-Dc4">
+                                <rect key="frame" x="230" y="226" width="140" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Log Meal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newMeal:" destination="OEe-cP-TgD" eventType="touchUpInside" id="LGj-As-M7N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QlA-cy-7mo" firstAttribute="top" secondItem="wMJ-FW-cMd" secondAttribute="bottom" priority="800" constant="259" id="2KV-0T-Vb5"/>
-                            <constraint firstItem="bDq-VH-Dc4" firstAttribute="top" secondItem="iEt-h1-HeS" secondAttribute="bottom" priority="800" constant="161" id="7FS-GR-0WG"/>
-                            <constraint firstItem="wMJ-FW-cMd" firstAttribute="top" secondItem="bDq-VH-Dc4" secondAttribute="bottom" priority="900" constant="60" id="a56-It-m8a"/>
-                            <constraint firstItem="bDq-VH-Dc4" firstAttribute="top" secondItem="iEt-h1-HeS" secondAttribute="bottom" constant="161" id="dXb-O0-WhN"/>
-                            <constraint firstAttribute="centerX" secondItem="bDq-VH-Dc4" secondAttribute="centerX" id="g43-Js-fdi"/>
-                            <constraint firstAttribute="centerX" secondItem="wMJ-FW-cMd" secondAttribute="centerX" id="knV-aX-3da"/>
+                            <constraint firstAttribute="centerX" secondItem="wMJ-FW-cMd" secondAttribute="centerX" id="Unx-xI-rOE"/>
+                            <constraint firstAttribute="centerX" secondItem="bDq-VH-Dc4" secondAttribute="centerX" id="wx1-lm-CFd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R7B-Mc-XGH">
@@ -176,7 +168,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3HX-qs-kYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352" y="-630"/>
+            <point key="canvasLocation" x="1399" y="-630"/>
+        </scene>
+        <!--New Meal View Controller-->
+        <scene sceneID="6hn-dk-24a">
+            <objects>
+                <viewController storyboardIdentifier="MealView" id="xac-hZ-ZZU" customClass="NewMealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSp-Vx-khy"/>
+                        <viewControllerLayoutGuide type="bottom" id="I6f-UA-zLW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJN-Wj-I51">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAA-hc-YHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="-807"/>
+        </scene>
+        <!--New Bowel View Controller-->
+        <scene sceneID="sSh-x6-hqt">
+            <objects>
+                <viewController storyboardIdentifier="BowelView" id="hfM-x1-2qW" customClass="NewBowelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PyA-qn-gfx"/>
+                        <viewControllerLayoutGuide type="bottom" id="p7j-Mi-IeQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ado-LH-TZX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugp-Y6-rsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="-129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">

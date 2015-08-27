@@ -12,4 +12,6 @@
 
 @interface NewBowelViewController : UIViewController
 
+@property (nonatomic, strong) NSString *displayTitle;
+
 @end

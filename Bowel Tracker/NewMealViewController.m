@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // set our title
+    self.navigationItem.title = self.displayTitle;
 }
 
 - (void)didReceiveMemoryWarning {

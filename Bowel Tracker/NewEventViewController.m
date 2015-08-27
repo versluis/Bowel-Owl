@@ -46,10 +46,14 @@
     // create a new Meal event and hold a reference to it
     
     // pass it on to the next controller
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NewMealViewController *mealView = [storyboard instantiateViewControllerWithIdentifier:@"MealView"];
+    mealView.displayTitle = @"New Meal";
+    [self.navigationController pushViewController:mealView animated:YES];
     
     // the delegate method will then save and dismiss, but for now we'll do it here
     // dismiss this view controller
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -58,10 +62,16 @@
     // create a new BowelMovement event and hold a reference to it
     
     // pass it on to the next controller
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NewBowelViewController *bowelView = [storyboard instantiateViewControllerWithIdentifier:@"BowelView"];
+    bowelView.displayTitle = @"New Bowel Movement";
+ 
+    [self.navigationController pushViewController:bowelView animated:YES];
+    
     
     // the delegate method will then save and dismiss, but for now we'll do it here
     // dismiss this view controller
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

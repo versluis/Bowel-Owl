@@ -12,4 +12,6 @@
 
 @interface NewMealViewController : UIViewController
 
+@property (nonatomic, strong) NSString *displayTitle;
+
 @end
