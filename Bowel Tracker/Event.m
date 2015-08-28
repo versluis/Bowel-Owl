@@ -23,7 +23,7 @@
     // used as section in the table view
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.dateStyle = NSDateFormatterFullStyle;
     NSString *currentDate = [formatter stringFromDate:self.timeStamp];
     
     return currentDate;
