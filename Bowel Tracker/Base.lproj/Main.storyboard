@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -188,18 +189,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta8-SH-oQE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta8-SH-oQE">
                                 <rect key="frame" x="284" y="149" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zn6-jZ-GHl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zn6-jZ-GHl">
                                 <rect key="frame" x="16" y="178" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFt-3Q-z5a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFt-3Q-z5a">
                                 <rect key="frame" x="16" y="269" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,10 +209,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zn6-jZ-GHl" firstAttribute="top" secondItem="iJN-Wj-I51" secondAttribute="top" constant="178" id="1Lh-OE-IXG"/>
+                            <constraint firstItem="zn6-jZ-GHl" firstAttribute="top" secondItem="ta8-SH-oQE" secondAttribute="bottom" constant="8" symbolic="YES" id="8qt-qv-Gye"/>
                             <constraint firstAttribute="centerX" secondItem="qFt-3Q-z5a" secondAttribute="centerX" id="IzH-8W-69O"/>
-                            <constraint firstAttribute="centerX" secondItem="zn6-jZ-GHl" secondAttribute="centerX" id="UZU-rw-NjP"/>
-                            <constraint firstAttribute="centerY" secondItem="zn6-jZ-GHl" secondAttribute="centerY" constant="107" id="iIN-fr-rn4"/>
+                            <constraint firstItem="qFt-3Q-z5a" firstAttribute="top" secondItem="zn6-jZ-GHl" secondAttribute="bottom" constant="61" id="Llf-Vt-2A3"/>
+                            <constraint firstItem="zn6-jZ-GHl" firstAttribute="trailing" secondItem="qFt-3Q-z5a" secondAttribute="trailing" id="e3C-7A-7CT"/>
+                            <constraint firstItem="zn6-jZ-GHl" firstAttribute="leading" secondItem="iJN-Wj-I51" secondAttribute="leadingMargin" id="egW-CZ-6Ve"/>
                             <constraint firstAttribute="centerX" secondItem="ta8-SH-oQE" secondAttribute="centerX" constant="-0.5" id="s9M-i3-HGD"/>
+                            <constraint firstItem="zn6-jZ-GHl" firstAttribute="leading" secondItem="qFt-3Q-z5a" secondAttribute="leading" id="zdJ-Yw-CZj"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -236,8 +241,30 @@
                     <view key="view" contentMode="scaleToFill" id="ado-LH-TZX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jF8-4A-aI5">
+                                <rect key="frame" x="16" y="177" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx7-Js-CEO">
+                                <rect key="frame" x="284" y="138" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jF8-4A-aI5" firstAttribute="top" secondItem="Rx7-Js-CEO" secondAttribute="bottom" constant="18" id="MXE-5t-Rgi"/>
+                            <constraint firstItem="jF8-4A-aI5" firstAttribute="leading" secondItem="ado-LH-TZX" secondAttribute="leadingMargin" id="MvV-ff-bsj"/>
+                            <constraint firstItem="p7j-Mi-IeQ" firstAttribute="top" secondItem="jF8-4A-aI5" secondAttribute="bottom" constant="393" id="OE9-ew-10R"/>
+                            <constraint firstItem="jF8-4A-aI5" firstAttribute="trailing" secondItem="ado-LH-TZX" secondAttribute="trailingMargin" id="gQk-tb-3cy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bowelTextfield" destination="jF8-4A-aI5" id="NOq-OZ-dwJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugp-Y6-rsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

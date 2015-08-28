@@ -35,12 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D2D7EAD51B8FBBFF002E5005 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = "Bowel Tracker/Event.h"; sourceTree = "<group>"; };
-		D2D7EAD61B8FBBFF002E5005 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = "Bowel Tracker/Event.m"; sourceTree = "<group>"; };
-		D2D7EADB1B8FBE63002E5005 /* BowelMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BowelMovement.h; path = "Bowel Tracker/BowelMovement.h"; sourceTree = "<group>"; };
-		D2D7EADC1B8FBE63002E5005 /* BowelMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BowelMovement.m; path = "Bowel Tracker/BowelMovement.m"; sourceTree = "<group>"; };
-		D2D7EADE1B8FBE64002E5005 /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Meal.h; path = "Bowel Tracker/Meal.h"; sourceTree = "<group>"; };
-		D2D7EADF1B8FBE64002E5005 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Meal.m; path = "Bowel Tracker/Meal.m"; sourceTree = "<group>"; };
+		D2D7EAD51B8FBBFF002E5005 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		D2D7EAD61B8FBBFF002E5005 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		D2D7EADB1B8FBE63002E5005 /* BowelMovement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BowelMovement.h; sourceTree = "<group>"; };
+		D2D7EADC1B8FBE63002E5005 /* BowelMovement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BowelMovement.m; sourceTree = "<group>"; };
+		D2D7EADE1B8FBE64002E5005 /* Meal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		D2D7EADF1B8FBE64002E5005 /* Meal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
 		D2F486D41B8F5E0D00824A0B /* Bowel Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bowel Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F486D81B8F5E0D00824A0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F486D91B8F5E0D00824A0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,15 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2F486CB1B8F5E0D00824A0B = {
+		D2D7EAE11B90060E002E5005 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				D2F486DE1B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld */,
 				D2D7EADE1B8FBE64002E5005 /* Meal.h */,
 				D2D7EADF1B8FBE64002E5005 /* Meal.m */,
 				D2D7EADB1B8FBE63002E5005 /* BowelMovement.h */,
 				D2D7EADC1B8FBE63002E5005 /* BowelMovement.m */,
 				D2D7EAD51B8FBBFF002E5005 /* Event.h */,
 				D2D7EAD61B8FBBFF002E5005 /* Event.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		D2F486CB1B8F5E0D00824A0B = {
+			isa = PBXGroup;
+			children = (
 				D2F486D61B8F5E0D00824A0B /* Bowel Tracker */,
 				D2F486F61B8F5E0D00824A0B /* Bowel TrackerTests */,
 				D2F486D51B8F5E0D00824A0B /* Products */,
@@ -125,7 +133,7 @@
 				D2F486E71B8F5E0D00824A0B /* Main.storyboard */,
 				D2F486EA1B8F5E0D00824A0B /* Images.xcassets */,
 				D2F486EC1B8F5E0D00824A0B /* LaunchScreen.xib */,
-				D2F486DE1B8F5E0D00824A0B /* Bowel_Tracker.xcdatamodeld */,
+				D2D7EAE11B90060E002E5005 /* Core Data */,
 				D2F486D71B8F5E0D00824A0B /* Supporting Files */,
 			);
 			path = "Bowel Tracker";

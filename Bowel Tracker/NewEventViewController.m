@@ -110,6 +110,8 @@
 - (void)bowelMovementSave:(BowelMovement *)bowelMovement {
     
     // save context
+    AppDelegate *myAppDelegate = [UIApplication sharedApplication].delegate;
+    [myAppDelegate saveContext];
     
     // and dismiss this view controller
     [self dismissViewControllerAnimated:YES completion:nil];
