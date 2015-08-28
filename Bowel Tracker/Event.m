@@ -15,5 +15,18 @@
 @dynamic title;
 @dynamic notes;
 @dynamic status;
+@dynamic daySection;
+
+- (NSString *)daySection {
+    
+    // calculate a short date style from the timestamp
+    // used as section in the table view
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    NSString *currentDate = [formatter stringFromDate:self.timeStamp];
+    
+    return currentDate;
+}
 
 @end

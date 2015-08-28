@@ -17,4 +17,6 @@
 @property (nonatomic, retain) NSString * notes;
 @property (nonatomic, retain) NSString * status;
 
+@property (nonatomic, strong) NSString *daySection;
+
 @end
