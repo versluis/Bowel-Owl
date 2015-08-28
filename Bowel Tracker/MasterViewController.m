@@ -114,7 +114,16 @@
     
     // Cell title
     Event *currentMeal = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = currentMeal.title;
+    NSString *theTitle;
+    
+    // what type of class is this?
+    if ([currentMeal isKindOfClass:[Meal class]]) {
+        theTitle = [NSString stringWithFormat:@"M: %@", currentMeal.title];
+    } else {
+        theTitle = [NSString stringWithFormat:@"B: %@", currentMeal.title];
+    }
+    
+    cell.textLabel.text = theTitle;
     
     // build date formatter
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
