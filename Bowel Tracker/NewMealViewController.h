@@ -12,7 +12,7 @@
 #import "Meal.h"
 
 @protocol MealDelegate;
-@interface NewMealViewController : UIViewController
+@interface NewMealViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, strong) NSString *displayTitle;
 @property (nonatomic, strong) Meal *meal;
