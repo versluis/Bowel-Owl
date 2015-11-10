@@ -15,23 +15,12 @@
 @property (strong, nonatomic) IBOutlet UITextView *mealTextView;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIPickerView *mealPicker;
-@property (strong, nonatomic) NSArray *mealTypes;
 
 @end
 
 @implementation NewMealViewController
 
 # pragma mark - Custom Initialisers
-
-- (NSArray *)mealTypes {
-    
-    // defining what types of meals can be chosen by the picker
-    if (!_mealTypes) {
-        _mealTypes = @[@"Breakfast", @"Lunch", @"Dinner", @"Snack"];
-    }
-    
-    return _mealTypes;
-}
 
 # pragma mark - View Controller Logic
 
@@ -46,22 +35,6 @@
     self.navigationItem.rightBarButtonItem = saveButton;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)saveMeal {
-    
-    // called from bar button item made in code (viewDidLoad)
-    
-    // transfer values to our meal
-    [self populateMealWithValues];
-    
-    // call delegate and save context
-    [self.delegate mealSave:self.meal];
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
@@ -70,6 +43,22 @@
         NSLog(@"Back button was pressed.");
         [self.delegate mealCancel:self.meal];
     }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)saveMeal {
+    
+    // called from bar button item made in code (viewDidLoad)
+    
+    // transfer values to our meal
+    [self populateMealWithValues];
+    
+    // call delegate and save context
+    [self.delegate mealSave:self.meal];
 }
 
 - (void)populateMealWithValues {
@@ -82,8 +71,8 @@
     self.meal.notes = self.mealTextView.text;
     
     // transfer meal picker data
-    NSInteger row = [self.mealPicker selectedRowInComponent:0];
-    self.meal.title = [self.mealTypes objectAtIndex:row];
+    NSNumber *row = [NSNumber numberWithInteger:[self.mealPicker selectedRowInComponent:0]];
+    self.meal.title = [Meal mealTitleWithStatus:row];
     
 }
 
@@ -96,21 +85,25 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
-    return self.mealTypes.count;
+    // the number of meal items we have
+    // defined in Meal - now sure how to count them
+    return [Meal mealChoices];
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     
     UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
-    textLabel.text = [self.mealTypes objectAtIndex:row];
+    // textLabel.text = [self.mealTypes objectAtIndex:row];
+    NSNumber *mealType = [NSNumber numberWithInteger:row];
+    textLabel.text = [Meal mealTitleWithStatus:mealType];
     return textLabel;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
     // user has chosen a meal - please react here
-    
-    NSString *currentMealType = [self.mealTypes objectAtIndex:row];
+    NSNumber *mealType = [NSNumber numberWithInteger:row];
+    NSString *currentMealType = [Meal mealTitleWithStatus:mealType];
     self.meal.title = currentMealType;
 
 }

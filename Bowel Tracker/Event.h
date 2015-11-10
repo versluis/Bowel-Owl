@@ -15,7 +15,7 @@
 @property (nonatomic, retain) NSDate * timeStamp;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * notes;
-@property (nonatomic, retain) NSString * status;
+@property (nonatomic, retain) NSNumber * status;
 
 @property (nonatomic, strong) NSString *daySection;
 
