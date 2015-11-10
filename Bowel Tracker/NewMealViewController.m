@@ -8,10 +8,11 @@
 
 #import "NewMealViewController.h"
 
-@interface NewMealViewController ()
+@interface NewMealViewController () <UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UILabel *mealTitle;
 @property (strong, nonatomic) IBOutlet UITextField *mealTextField;
+@property (strong, nonatomic) IBOutlet UITextView *mealTextView;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIPickerView *mealPicker;
 @property (strong, nonatomic) NSArray *mealTypes;
@@ -50,16 +51,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)saveMeal {
+- (IBAction)saveMeal {
     
-    // current date (replace with date picker later)
+    // called from bar button item made in code (viewDidLoad)
+    
+    // transfer values to our meal
+    [self populateMealWithValues];
+    
+    // call delegate and save context
+    [self.delegate mealSave:self.meal];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // if the back button was pressed, cancel this meal
+    if (self.isMovingFromParentViewController) {
+        NSLog(@"Back button was pressed.");
+        [self.delegate mealCancel:self.meal];
+    }
+}
+
+- (void)populateMealWithValues {
+    
+    // create a date of "right now"
     self.meal.timeStamp = [NSDate date];
     
     // transfer values from text fields to managed object
     // self.meal.title = self.mealTextField.text;
+    self.meal.notes = self.mealTextView.text;
     
-    // call delegate and save context
-    [self.delegate mealSave:self.meal];
+    // transfer meal picker data
+    NSInteger row = [self.mealPicker selectedRowInComponent:0];
+    self.meal.title = [self.mealTypes objectAtIndex:row];
+    
 }
 
 # pragma mark - Picker Methods
@@ -90,6 +115,27 @@
 
 }
 
+# pragma mark - Text View Methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    
+    // clear the default text
+    NSString *defaultText = @"What did you have?";
+    if ([textView.text isEqualToString:defaultText]) {
+        textView.text = nil;
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    
+    // check if we have some data, otherwise bring back the default text
+    if (!textView.text) {
+        textView.text = @"What did you have?";
+        return;
+    }
+    
+    
+}
 
 
 @end

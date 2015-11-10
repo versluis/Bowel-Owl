@@ -11,6 +11,8 @@
 @interface NewEventViewController ()
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) Meal *currentMeal;
+@property (nonatomic, strong) BowelMovement *currentBowelMovement;
 
 @end
 
@@ -37,6 +39,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)saveContext {
+    
+    // save the manged object context in our AppDelegate
+    AppDelegate *myAppDelegate = [UIApplication sharedApplication].delegate;
+    [myAppDelegate saveContext];
+}
+
 
 # pragma mark - Button Logic
 
@@ -50,6 +59,7 @@
     
     // create a new Meal event and hold a reference to it
     Meal *newMeal = [NSEntityDescription insertNewObjectForEntityForName:@"Meal" inManagedObjectContext:self.managedObjectContext];
+    self.currentMeal = newMeal;
     
     // pass it on to the next controller
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -92,8 +102,7 @@
 - (void)mealSave:(Meal *)meal {
     
     // save meal to current context
-    AppDelegate *myAppDelegate = [UIApplication sharedApplication].delegate;
-    [myAppDelegate saveContext];
+    [self saveContext];
     
     // and dismiss this view controller
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -101,7 +110,9 @@
 
 - (void)mealCancel:(Meal *)meal {
     
-    // remove meal
+    // remove meal from our context
+    [self.managedObjectContext deleteObject:self.currentMeal];
+    [self saveContext];
     
     // and dismiss this view controller
     [self dismissViewControllerAnimated:YES completion:nil];
