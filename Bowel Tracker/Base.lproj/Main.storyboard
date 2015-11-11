@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9058" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -263,31 +262,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jF8-4A-aI5">
-                                <rect key="frame" x="16" y="177" width="568" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GTa-i9-Rkd">
+                                <rect key="frame" x="140" y="128" width="320" height="344"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-9Z-UB1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                        <animations/>
+                                    </pickerView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How was it?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pZF-0m-qSe">
+                                        <rect key="frame" x="0.0" y="216" width="320" height="128"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rx7-Js-CEO">
-                                <rect key="frame" x="284" y="138" width="33" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jF8-4A-aI5" firstAttribute="top" secondItem="Rx7-Js-CEO" secondAttribute="bottom" constant="18" id="MXE-5t-Rgi"/>
-                            <constraint firstItem="jF8-4A-aI5" firstAttribute="leading" secondItem="ado-LH-TZX" secondAttribute="leadingMargin" id="MvV-ff-bsj"/>
-                            <constraint firstItem="p7j-Mi-IeQ" firstAttribute="top" secondItem="jF8-4A-aI5" secondAttribute="bottom" constant="393" id="OE9-ew-10R"/>
-                            <constraint firstItem="jF8-4A-aI5" firstAttribute="trailing" secondItem="ado-LH-TZX" secondAttribute="trailingMargin" id="gQk-tb-3cy"/>
+                            <constraint firstItem="GTa-i9-Rkd" firstAttribute="top" secondItem="PyA-qn-gfx" secondAttribute="bottom" constant="64" id="6aW-LZ-kVS"/>
+                            <constraint firstItem="GTa-i9-Rkd" firstAttribute="centerY" secondItem="ado-LH-TZX" secondAttribute="centerY" id="PD3-aU-cng"/>
+                            <constraint firstItem="GTa-i9-Rkd" firstAttribute="centerX" secondItem="ado-LH-TZX" secondAttribute="centerX" id="th6-ob-rYL"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="bowelTextfield" destination="jF8-4A-aI5" id="NOq-OZ-dwJ"/>
+                        <outlet property="bowelPicker" destination="r6r-9Z-UB1" id="7YI-fY-n9U"/>
+                        <outlet property="textView" destination="pZF-0m-qSe" id="yDe-eV-5dj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugp-Y6-rsy" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,7 +10,8 @@
 
 @interface NewBowelViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *bowelTextfield;
+@property (strong, nonatomic) IBOutlet UIPickerView *bowelPicker;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -28,6 +29,16 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // if the back button was pressed, cancel this movement
+    if (self.isMovingFromParentViewController) {
+        NSLog(@"Back button was pressed.");
+        [self.delegate bowelMovementCancel:self.bowelMovement];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -43,6 +54,20 @@
     
     // call delegate and save context
     [self.delegate bowelMovementSave:self.bowelMovement];
+}
+
+- (void)populateMovementWithValues {
+    
+    // create a date of "right now"
+    self.bowelMovement.timeStamp = [NSDate date];
+    
+    // transfer values from text fields to managed object
+    self.bowelMovement.notes = self.textView.text;
+    
+    // transfer meal picker data
+    NSNumber *row = [NSNumber numberWithInteger:[self.bowelPicker selectedRowInComponent:0]];
+    self.bowelMovement.title = [BowelMovement mealTitleWithStatus:row];
+    
 }
 
 

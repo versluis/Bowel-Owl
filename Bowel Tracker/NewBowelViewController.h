@@ -12,7 +12,7 @@
 #import "BowelMovement.h"
 
 @protocol BowelMovementDelegate;
-@interface NewBowelViewController : UIViewController
+@interface NewBowelViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, strong) NSString *displayTitle;
 @property (nonatomic, strong) BowelMovement *bowelMovement;

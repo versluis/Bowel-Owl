@@ -11,5 +11,52 @@
 
 @implementation BowelMovement
 
++ (NSString *)movementTitleWithStatus:(NSNumber *)bowelStatus {
+    
+    // list of choices for Bowel Movements
+    NSString *bowelTitle;
+    
+    switch ([bowelStatus integerValue]) {
+        case 0:
+            bowelTitle = @"Super Hard Lumps";
+            break;
+            
+            case 1:
+            bowelTitle = @"Lumpy Sausage";
+            break;
+            
+            case 2:
+            bowelTitle = @"Hard Sausage";
+            break;
+            
+           case 3:
+            bowelTitle = @"Soft Sausage";
+            break;
+            
+            case 4:
+            bowelTitle = @"Soft Blobs";
+            break;
+            
+            case 5:
+            bowelTitle = @"Mushy with ragged edges";
+            break;
+            
+            case 6:
+            bowelTitle = @"Watery";
+            break;
+            
+        default:
+            bowelTitle = @"Something else";
+            break;
+    }
+    
+    
+    return nil;
+}
+
++ (int)movementChoices {
+    
+    return 7;
+}
 
 @end
