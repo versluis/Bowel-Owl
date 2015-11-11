@@ -55,13 +55,13 @@
     // called from bar button item made in code (viewDidLoad)
     
     // transfer values to our meal
-    [self populateMealWithValues];
+    [self populateWithValues];
     
     // call delegate and save context
     [self.delegate mealSave:self.meal];
 }
 
-- (void)populateMealWithValues {
+- (void)populateWithValues {
     
     // create a date of "right now"
     self.meal.timeStamp = [NSDate date];
@@ -73,7 +73,6 @@
     // transfer meal picker data
     NSNumber *row = [NSNumber numberWithInteger:[self.mealPicker selectedRowInComponent:0]];
     self.meal.title = [Meal mealTitleWithStatus:row];
-    
 }
 
 # pragma mark - Picker Methods
@@ -86,7 +85,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     
     // the number of meal items we have
-    // defined in Meal - now sure how to count them
+    // defined in Meal Class
     return [Meal mealChoices];
 }
 

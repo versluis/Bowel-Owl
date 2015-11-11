@@ -50,8 +50,7 @@
             break;
     }
     
-    
-    return nil;
+    return bowelTitle;
 }
 
 + (int)movementChoices {

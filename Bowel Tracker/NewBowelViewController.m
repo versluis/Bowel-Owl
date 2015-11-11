@@ -46,29 +46,79 @@
 
 - (void)saveBowelMovement {
     
-    // current date (replace with date picker later)
-    self.bowelMovement.timeStamp = [NSDate date];
-    
     // transfer values from text fields to managed object
-    self.bowelMovement.title = self.bowelTextfield.text;
+    [self populateWithValues];
     
     // call delegate and save context
     [self.delegate bowelMovementSave:self.bowelMovement];
 }
 
-- (void)populateMovementWithValues {
+- (void)populateWithValues {
     
     // create a date of "right now"
     self.bowelMovement.timeStamp = [NSDate date];
     
     // transfer values from text fields to managed object
+    // self.meal.title = self.mealTextField.text;
     self.bowelMovement.notes = self.textView.text;
     
     // transfer meal picker data
     NSNumber *row = [NSNumber numberWithInteger:[self.bowelPicker selectedRowInComponent:0]];
-    self.bowelMovement.title = [BowelMovement mealTitleWithStatus:row];
+    self.bowelMovement.status = row;
+}
+
+# pragma mark - Picker Methods
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    // the number of meal items we have
+    // defined in BowelMovement Class
+    return [BowelMovement movementChoices];
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    
+    UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 40)];
+    // textLabel.text = [self.mealTypes objectAtIndex:row];
+    NSNumber *status = [NSNumber numberWithInteger:row];
+    textLabel.text = [BowelMovement movementTitleWithStatus:status];
+    return textLabel;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    // user has chosen a meal - please react here
+    NSNumber *status = [NSNumber numberWithInteger:row];
+    NSString *movement = [BowelMovement movementTitleWithStatus:status];
+    self.bowelMovement.title = movement;
     
 }
 
+# pragma mark - Text View Methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    
+    // clear the default text
+    NSString *defaultText = @"How was it?";
+    if ([textView.text isEqualToString:defaultText]) {
+        textView.text = nil;
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    
+    // check if we have some data, otherwise bring back the default text
+    if (!textView.text) {
+        textView.text = @"How was it?";
+        return;
+    }
+    
+    
+}
 
 @end

@@ -126,7 +126,7 @@
     if ([currentMeal isKindOfClass:[Meal class]]) {
         theTitle = [NSString stringWithFormat:@"M: %@", currentMeal.title];
     } else {
-        theTitle = [NSString stringWithFormat:@"B: %@", currentMeal.title];
+        theTitle = [NSString stringWithFormat:@"B: %@", @"Bowel Movement"];
     }
     
     cell.textLabel.text = theTitle;
