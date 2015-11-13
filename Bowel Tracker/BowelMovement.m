@@ -53,6 +53,11 @@
     return bowelTitle;
 }
 
++ (NSString *)defaultMessage {
+    
+    return @"How was it?";
+}
+
 + (int)movementChoices {
     
     return 7;

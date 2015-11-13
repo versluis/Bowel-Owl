@@ -14,6 +14,7 @@
 @interface Meal : Event
 
 + (NSString *)mealTitleWithStatus:(NSNumber *)mealStatus;
++ (NSString *)defaultMessage;
 + (int)mealChoices;
 
 @end

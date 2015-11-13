@@ -41,6 +41,11 @@
     return mealTitle;
 }
 
++ (NSString *)defaultMessage {
+    
+    return @"What did you have?";
+}
+
 + (int)mealChoices {
     
     // return the number of meal choices

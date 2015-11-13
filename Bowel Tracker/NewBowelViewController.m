@@ -59,7 +59,7 @@
     self.bowelMovement.timeStamp = [NSDate date];
     
     // transfer values from text fields to managed object
-    if ([self.textView.text isEqualToString:@"How was it?"]) {
+    if ([self.textView.text isEqualToString:[BowelMovement defaultMessage]]) {
         self.bowelMovement.notes = @"";
     } else {
         self.bowelMovement.notes = self.textView.text;
@@ -107,7 +107,7 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     
     // clear the default text
-    NSString *defaultText = @"How was it?";
+    NSString *defaultText = [BowelMovement defaultMessage];
     if ([textView.text isEqualToString:defaultText]) {
         textView.text = nil;
     }
@@ -117,7 +117,7 @@
     
     // check if we have some data, otherwise bring back the default text
     if (!textView.text) {
-        textView.text = @"How was it?";
+        textView.text = [BowelMovement defaultMessage];
         return;
     }
     

@@ -67,7 +67,7 @@
     self.meal.timeStamp = [NSDate date];
     
     // transfer values from text fields to managed object
-    if ([self.mealTextView.text isEqualToString:@"What did you have?"]) {
+    if ([self.mealTextView.text isEqualToString:[Meal defaultMessage]]) {
         self.meal.notes = @"";
     } else {
         self.meal.notes = self.mealTextView.text;
@@ -115,7 +115,7 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     
     // clear the default text
-    NSString *defaultText = @"What did you have?";
+    NSString *defaultText = [Meal defaultMessage];
     if ([textView.text isEqualToString:defaultText]) {
         textView.text = nil;
     }
@@ -125,7 +125,7 @@
     
     // check if we have some data, otherwise bring back the default text
     if (!textView.text) {
-        textView.text = @"What did you have?";
+        textView.text = [Meal defaultMessage];
         return;
     }
     

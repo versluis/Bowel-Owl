@@ -14,6 +14,7 @@
 @interface BowelMovement : Event
 
 + (NSString *)movementTitleWithStatus:(NSNumber *)bowelStatus;
++ (NSString *)defaultMessage;
 + (int)movementChoices;
 
 @end
