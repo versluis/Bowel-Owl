@@ -59,8 +59,11 @@
     self.bowelMovement.timeStamp = [NSDate date];
     
     // transfer values from text fields to managed object
-    // self.meal.title = self.mealTextField.text;
-    self.bowelMovement.notes = self.textView.text;
+    if ([self.textView.text isEqualToString:@"How was it?"]) {
+        self.bowelMovement.notes = @"";
+    } else {
+        self.bowelMovement.notes = self.textView.text;
+    }
     
     // transfer meal picker data
     NSNumber *row = [NSNumber numberWithInteger:[self.bowelPicker selectedRowInComponent:0]];

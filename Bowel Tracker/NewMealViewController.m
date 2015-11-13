@@ -67,8 +67,11 @@
     self.meal.timeStamp = [NSDate date];
     
     // transfer values from text fields to managed object
-    // self.meal.title = self.mealTextField.text;
-    self.meal.notes = self.mealTextView.text;
+    if ([self.mealTextView.text isEqualToString:@"What did you have?"]) {
+        self.meal.notes = @"";
+    } else {
+        self.meal.notes = self.mealTextView.text;
+    }
     
     // transfer meal picker data
     NSNumber *row = [NSNumber numberWithInteger:[self.mealPicker selectedRowInComponent:0]];
