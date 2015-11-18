@@ -243,4 +243,77 @@
 }
  */
 
+# pragma mark - Changing the Fetch Request
+
+- (IBAction)filterButtonPressed:(id)sender {
+    
+    // bring up an action sheet with filtering options
+    
+    // create actions
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"All Events" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self filterAllEvents];
+    }];
+    
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"Only Meals" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self filterMealEvents];
+    }];
+    
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"Only Bowel Movements" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self filterBowelMovements];
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Forget it..." style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        // nothing happens here
+    }];
+    
+    // create action controller
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:nil message:@"Which events would you like to see\nin the table view?" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [controller addAction:action1];
+    [controller addAction:action2];
+    [controller addAction:action3];
+    [controller addAction:cancel];
+    
+    [self presentViewController:controller animated:YES completion:nil];
+    
+}
+
+- (void)filterAllEvents {
+    
+    [self filterEventsByEntity:@"Event"];
+}
+
+- (void)filterMealEvents {
+    
+    [self filterEventsByEntity:@"Meal"];
+    
+}
+
+- (void)filterBowelMovements {
+    
+    [self filterEventsByEntity:@"BowelMovement"];
+}
+
+- (void)filterEventsByEntity:(NSString *)event {
+    
+    // create a fetch request displaying only meal events
+    NSEntityDescription *entity = [NSEntityDescription entityForName:event inManagedObjectContext:self.managedObjectContext];
+    [self.fetchedResultsController.fetchRequest setEntity:entity];
+    
+    // Specify how the fetched objects should be sorted
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp"
+                                                                   ascending:NO];
+    [self.fetchedResultsController.fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:self.fetchedResultsController.fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        // error handling goes here
+    }
+    
+    // reload data
+    [self.fetchedResultsController performFetch:nil];
+    [self.tableView reloadData];
+}
+
 @end
